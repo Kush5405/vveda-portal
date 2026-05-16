@@ -25,13 +25,15 @@
 
         /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 100vh; /* Changed from height: 100vh */
+            padding: 60px 20px; /* Gives the top and bottom padding breathing room */
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
         }
 
         .logo-box {
@@ -113,17 +115,17 @@
         }
 
         /* Data Proof Footer */
+        /* Change .stats from absolute positioning to a natural relative flow block */
         .stats {
-            position: absolute;
-            bottom: 30px;
+            position: relative; /* Changed from position: absolute */
+            margin-top: 60px; /* Pushes it cleanly below your CTA button */
+            bottom: 0; /* Clears the old fixed constraint */
             width: 100%;
+            max-width: 1200px;
             display: flex;
             justify-content: center;
-            gap: 50px;
-            color: #718096;
-            font-size: 0.9rem;
+            gap: 40px;
         }
-
         .stat-item b { color: white; }
     </style>
 </head>
